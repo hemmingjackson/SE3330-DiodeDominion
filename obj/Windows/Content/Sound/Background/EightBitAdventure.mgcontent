@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/Jackson Hemming/source/repos/DiodeDominionLatest/Src/Diode Dominion/Content/Sound/Background/EightBitAdventure.ogg</SourceFile>
+  <SourceTime>2021-05-09T22:09:48.8356034-05:00</SourceTime>
+  <DestFile>C:/Users/Jackson Hemming/source/repos/DiodeDominionLatest/Src/Diode Dominion/Content/bin/Windows/Content/Sound/Background/EightBitAdventure.xnb</DestFile>
+  <DestTime>2022-01-13T15:48:38.6599711-06:00</DestTime>
+  <Importer>OggImporter</Importer>
+  <ImporterTime>2018-12-08T10:35:54-06:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2018-12-08T10:35:54-06:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/Jackson Hemming/source/repos/DiodeDominionLatest/Src/Diode Dominion/Content/bin/Windows/Content/Sound/Background/EightBitAdventure.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>
