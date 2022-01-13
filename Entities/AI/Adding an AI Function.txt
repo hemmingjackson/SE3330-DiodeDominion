@@ -1,0 +1,15 @@
+﻿To add AI functionality here are the steps that should be followed.
+
+	1) Create a unit test for an action. The action will dictate how the AI will accomplish the task
+
+	2) Create the action class. It should inherit from Action and contain everything necessary to accomplish
+       the task.
+
+	3) Create the event class. It should inherit from BaseEvent. This event should only be used to transfer 
+       information and should not modify it in any way. It should only caontain elements that are absolutely
+       necessary.
+
+	4) Add the functionality to the AI. The AI should take the event and then call the actionable. The actionable should be
+       added to the queue in the AI to be completed in the FIFO ordering.
+
+	5) Add the ability for the EntityEventHandler to pass along this new event
