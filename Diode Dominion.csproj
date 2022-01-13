@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E2B669E-BEF3-4FE8-9AFF-4FBDF8151E15}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Diode_Dominion</RootNamespace>
+    <AssemblyName>Diode Dominion</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F48CFC9A736996AAF557086D63C1F2F1930B7963</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Diode Dominion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DiodeDominionGame.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\Fight.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\DepositInStockpile.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\DropItem.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\GrowCrop.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\HarvestStaticEntity.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\IAction.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\Move.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\Movement\MovementNode.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\Movement\Pathfinder.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\PlantCrop.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\TillGround.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\SpecificAIs\AnimalAI.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\SpecificAIs\BaseAI.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\PickupItem.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\Actions\UpdateHealth.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\SpecificAIs\ColonistAI.cs" />
+    <Compile Include="DiodeDominion\Entities\AI\SpecificAIs\ItemAI.cs" />
+    <Compile Include="DiodeDominion\Entities\Animals\Animal.cs" />
+    <Compile Include="DiodeDominion\Entities\Animals\AnimalType.cs" />
+    <Compile Include="DiodeDominion\Entities\Animals\Anteater.cs" />
+    <Compile Include="DiodeDominion\Entities\Animals\Capybara.cs" />
+    <Compile Include="DiodeDominion\Entities\Animals\Giraffe.cs" />
+    <Compile Include="DiodeDominion\Entities\Animals\Goose.cs" />
+    <Compile Include="DiodeDominion\Entities\Animals\Ostrich.cs" />
+    <Compile Include="DiodeDominion\Entities\Colonists\Colonist.cs" />
+    <Compile Include="DiodeDominion\Entities\Colonists\ColonistBuilder.cs" />
+    <Compile Include="DiodeDominion\Entities\Colonists\ColonistNames.cs" />
+    <Compile Include="DiodeDominion\Entities\Colonists\IColonistBuilder.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\Crops\Corn.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\Crops\CropType.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\Meat.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\Item.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\ItemInformation.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\ItemType.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\SpecificItems\Wood.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\Tools\Tool.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\Tools\ToolType.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\Weapons\AttackRange.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\Weapons\LaserHandgun.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\Weapons\Melee.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\Weapons\Sword.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\Weapons\Trident.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\Weapons\WeaponType.cs" />
+    <Compile Include="DiodeDominion\Entities\Items\Weapons\Weapon.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\Crops\Crop.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\Crops\GrowthType.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\Furnitures\Furniture.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\Ores\Ore.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\Spaceship.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\StaticEntity.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\StaticEntityType.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\Stockpiles\ConglomerateStockpile.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\Stockpiles\StockpileZone.cs" />
+    <Compile Include="DiodeDominion\Entities\StaticEntities\Trees\Tree.cs" />
+    <Compile Include="DiodeDominion\Events\CropGrowthEvent.cs" />
+    <Compile Include="DiodeDominion\Events\DepositItemInStockpileEvent.cs" />
+    <Compile Include="DiodeDominion\Events\PlantCropEvent.cs" />
+    <Compile Include="DiodeDominion\Events\TileTillEvent.cs" />
+    <Compile Include="DiodeDominion\Events\UpdateHungerEvent.cs" />
+    <Compile Include="DiodeDominion\Screens\CommandPattern\ChangeColonistCommand.cs" />
+    <Compile Include="DiodeDominion\Screens\CommandPattern\ColonistRandomizeCommand.cs" />
+    <Compile Include="DiodeDominion\Screens\CommandPattern\CommandInvoker.cs" />
+    <Compile Include="DiodeDominion\Screens\CommandPattern\ICommand.cs" />
+    <Compile Include="DiodeDominion\Screens\CommandPattern\SeedChangeCommand.cs" />
+    <Compile Include="DiodeDominion\Screens\CommandPattern\SkillDecrementCommand.cs" />
+    <Compile Include="DiodeDominion\Screens\CommandPattern\SkillIncrementCommand.cs" />
+    <Compile Include="DiodeDominion\Screens\WorldCreationScreen.cs" />
+    <Compile Include="DiodeDominion\World\Generators\AnimalGenerators\AnteaterGenerator.cs" />
+    <Compile Include="DiodeDominion\World\Generators\AnimalGenerators\CapybaraGenerator.cs" />
+    <Compile Include="DiodeDominion\World\Generators\AnimalGenerators\GiraffeGenerator.cs" />
+    <Compile Include="DiodeDominion\World\Generators\AnimalGenerators\GooseGenerator.cs" />
+    <Compile Include="DiodeDominion\World\Generators\EntityGameWorldGenerator.cs" />
+    <Compile Include="DiodeDominion\World\Generators\IGenerate.cs" />
+    <Compile Include="DiodeDominion\World\Generators\AnimalGenerators\OstrichGenerator.cs" />
+    <Compile Include="DiodeDominion\World\Generators\OreGenerator.cs" />
+    <Compile Include="DiodeDominion\World\Generators\TreeGenerator.cs" />
+    <Compile Include="DiodeDominion\World\UI\AnimalInfoUi.cs" />
+    <Compile Include="DiodeDominion\World\UI\ColonistDeadUi.cs" />
+    <Compile Include="DiodeDominion\World\UI\WeaponChoiceUi.cs" />
+    <Compile Include="DiodeDominion\World\UI\MeatUi.cs" />
+    <Compile Include="DiodeDominion\World\UI\ColonistInfoUi.cs" />
+    <Compile Include="DiodeDominion\World\UI\CommandPromptUI\TaskUI.cs" />
+    <Compile Include="DiodeDominion\World\UI\SelectFarmerUI.cs" />
+    <Compile Include="DiodeDominion\World\UI\CropUi.cs" />
+    <Compile Include="DiodeDominion\World\UI\ItemInfoUi.cs" />
+    <Compile Include="DiodeDominion\World\UI\StaticEntityUi.cs" />
+    <Compile Include="DiodeDominion\Events\DropItemEvent.cs" />
+    <Compile Include="DiodeDominion\Events\HarvestStaticEntityEvent.cs" />
+    <Compile Include="DiodeDominion\Events\HealEvent.cs" />
+    <Compile Include="DiodeDominion\Events\MoveEntityEvent.cs" />
+    <Compile Include="DiodeDominion\Events\PickUpItemEvent.cs" />
+    <Compile Include="DiodeDominion\Events\StopActionsEvent.cs" />
+    <Compile Include="DiodeDominion\Keybinds\Shortcuts.cs" />
+    <Compile Include="DiodeDominion\Screens\ColonistCreationScreen.cs" />
+    <Compile Include="DiodeDominion\Screens\TitleScreen.cs" />
+    <Compile Include="DiodeDominion\Textures\TextureLocalization.cs" />
+    <Compile Include="DiodeDominion\World\EntityEventHandler.cs" />
+    <Compile Include="DiodeDominion\World\Misc\PauseGame.cs" />
+    <Compile Include="DiodeDominion\World\Tiles\TileMapping.cs" />
+    <Compile Include="DiodeDominion\World\UI\CommandPromptUI\CommandPromptDialogBox.cs" />
+    <Compile Include="DiodeDominion\World\UI\EntityUi.cs" />
+    <Compile Include="DiodeDominion\World\UI\EntityUiFactory.cs" />
+    <Compile Include="DiodeDominion\World\UI\IUserInterface.cs" />
+    <Compile Include="DiodeDominion\World\UI\TileInteractions.cs" />
+    <Compile Include="DiodeDominion\World\UI\UserInterfaceManager.cs" />
+    <Compile Include="Engine\Camera\Camera.cs" />
+    <Compile Include="Engine\Camera\CameraBound.cs" />
+    <Compile Include="DiodeDominion\World\GameWorld.cs" />
+    <Compile Include="DiodeDominion\World\Tiles\MapTile.cs" />
+    <Compile Include="DiodeDominion\World\Tiles\TileType.cs" />
+    <Compile Include="Engine\Containers\Container.cs" />
+    <Compile Include="Engine\Containers\EntityContainer.cs" />
+    <Compile Include="Engine\Containers\GridContainer.cs" />
+    <Compile Include="Engine\Containers\IContainer.cs" />
+    <Compile Include="Engine\Controls\Buttons\Button.cs" />
+    <Compile Include="Engine\Controls\Component.cs" />
+    <Compile Include="Engine\Controls\ComponentManager.cs" />
+    <Compile Include="DiodeDominion\Entities\Entity.cs" />
+    <Compile Include="Engine\Controls\EntityInfoComponents\ItemComponent.cs" />
+    <Compile Include="Engine\Controls\EntityInfoComponents\InfoComponent.cs" />
+    <Compile Include="Engine\Controls\EntityInfoComponents\ItemInfoComponent.cs" />
+    <Compile Include="Engine\Controls\IComponent.cs" />
+    <Compile Include="Engine\Entities\MoodTypes.cs" />
+    <Compile Include="Engine\Entities\Skill.cs" />
+    <Compile Include="Engine\Entities\SkillsAndLevels.cs" />
+    <Compile Include="Engine\Entities\SkillTypes.cs" />
+    <Compile Include="Engine\Events\BaseEvent.cs" />
+    <Compile Include="DiodeDominion\Events\DamageDealtEvent.cs" />
+    <Compile Include="DiodeDominion\Events\UpdateInventoryEvent.cs" />
+    <Compile Include="Engine\Fonts\Font.cs" />
+    <Compile Include="DiodeDominion\Entities\Colonists\ColonistStatRandomizer.cs" />
+    <Compile Include="DiodeDominion\World\Generators\DefaultWorldGenerator.cs" />
+    <Compile Include="DiodeDominion\World\Generators\IWorldGenerator.cs" />
+    <Compile Include="Engine\MouseInformation\MouseSelection.cs" />
+    <Compile Include="Engine\Screens\GameScreen.cs" />
+    <Compile Include="Engine\Screens\IDraw.cs" />
+    <Compile Include="Engine\Screens\IUpdate.cs" />
+    <Compile Include="Engine\Screens\ScreenManager.cs" />
+    <Compile Include="Engine\Sounds\BackgroundMusic.cs" />
+    <Compile Include="Engine\Sounds\SoundManager.cs" />
+    <Compile Include="Engine\Sprites\OverlaySprite.cs" />
+    <Compile Include="Engine\Sprites\Sprite.cs" />
+    <Compile Include="Engine\GameTimer\GameTimer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Backgrounds\ColonistCreationScreen.png" />
+    <Content Include="Content\Backgrounds\default_background.png" />
+    <Content Include="Content\Colonist\ColonistSprite.png" />
+    <Content Include="Content\Colonist\DDColonistProfile1.png" />
+    <Content Include="DiodeDominion\Entities\AI\Adding an AI Function.txt" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+    <None Include="Content\bin\Windows\Backgrounds\default_background.xnb" />
+    <None Include="Content\bin\Windows\Button\BaseButton.xnb" />
+    <None Include="Content\bin\Windows\Content\Backgrounds\default_background.xnb" />
+    <None Include="Content\bin\Windows\Content\Button\BaseButton.xnb" />
+    <None Include="Content\bin\Windows\Content\Fonts\Font.xnb" />
+    <None Include="Content\bin\Windows\Content\Fonts\TimerFont.xnb" />
+    <None Include="Content\bin\Windows\Content\PlaceholderTextures\dirt.xnb" />
+    <None Include="Content\bin\Windows\Content\PlaceholderTextures\stone.xnb" />
+    <None Include="Content\bin\Windows\Content\PlaceholderTextures\water.xnb" />
+    <None Include="Content\bin\Windows\Fonts\Font.xnb" />
+    <None Include="Content\bin\Windows\PlaceholderTextures\dirt.xnb" />
+    <None Include="Content\bin\Windows\PlaceholderTextures\stone.xnb" />
+    <None Include="Content\bin\Windows\PlaceholderTextures\water.xnb" />
+    <None Include="Content\obj\Windows\Backgrounds\ColonistCreationScreen.mgcontent" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Button\" />
+    <Folder Include="Content\Entity\" />
+    <Folder Include="Content\Fonts\" />
+    <Folder Include="Content\PlaceholderTextures\" />
+    <Folder Include="Content\Tiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
